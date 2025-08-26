@@ -68,12 +68,12 @@ const destinations = {
 
 function searchDestinations() {
   const input = document.getElementById("searchInput").value.toLowerCase().trim();
-  const resultsContainer = document.getElementById("searchResults");
+  const cardContainer = document.getElementById("searchResultCard");
+  const cardImage = document.getElementById("cardImage");
+  const cardTitle = document.getElementById("cardTitle");
+  const cardDescription = document.getElementById("cardDescription");
 
-  // Clear old results
-  resultsContainer.innerHTML = "";
-
-  let matches = [];
+  let match = null;
 
   for (let key in destinations) {
     const place = destinations[key];
@@ -82,29 +82,23 @@ function searchDestinations() {
       place.title.toLowerCase().includes(input) ||
       place.description.toLowerCase().includes(input)
     ) {
-      matches.push(place);
+      match = place;
+      break; // stop at the first match
     }
   }
 
-  if (matches.length > 0) {
-    matches.forEach(place => {
-      const card = document.createElement("div");
-      card.classList.add("destination-card");
-
-      card.innerHTML = `
-        <img src="${place.image}" alt="${place.title}">
-        <h3>${place.title}</h3>
-        <p>${place.description}</p>
-      `;
-
-      resultsContainer.appendChild(card);
-    });
+  if (match) {
+    cardImage.src = match.image;
+    cardTitle.textContent = match.title;
+    cardDescription.textContent = match.description;
+    cardContainer.style.display = "block"; // show card
   } else {
     alert("No results found for: " + input);
+    cardContainer.style.display = "none"; // hide card if not found
   }
 }
 
 function clearSearch() {
   document.getElementById("searchInput").value = "";
-  document.getElementById("searchResults").innerHTML = "";
+  document.getElementById("searchResultCard").style.display = "none"; // hide card
 }
