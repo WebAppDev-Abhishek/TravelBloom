@@ -5,15 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Destinations - TravelBloom</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
+  <!-- Header -->
   <header>
-    <div class="logo">TravelBloom</div>
+    <div class="logo">
+      <img src="https://img.icons8.com/?size=100&id=8771&format=png&color=FFFFFF" alt="logo">
+      TravelBloom
+    </div>
+
     <nav>
       <a href="index.html">Home</a>
       <a href="about.html">About Us</a>
       <a href="contact.html">Contact Us</a>
+      <a href="destinations.html" class="active">Destinations</a>
     </nav>
+
     <div class="search-box">
       <input type="text" id="searchInput" placeholder="Enter a destination or keyword">
       <button onclick="searchDestinations()">Search</button>
@@ -21,12 +29,26 @@
     </div>
   </header>
 
+  <!-- Social Media Bar -->
+  <div id="socialBar" class="social-bar">
+    <a href="#"><i class="fab fa-facebook-f"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-youtube"></i></a>
+  </div>
+
+  <!-- Destinations Section -->
   <section class="destinations">
+    <h1>POPULAR DESTINATIONS</h1>
     <div class="destination-card">
-      <img src="images/sydney.jpg" alt="Sydney">
-      <h2>Sydney, Australia</h2>
-      <p>A beautiful coastal city with a relaxed atmosphere, featuring the Sydney Opera House, Harbour Bridge, and stunning beaches.</p>
-      <a href="#" class="btn">Visit</a>
+      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Beach">
+      <h3>Maldives</h3>
+      <p>Experience crystal-clear waters and luxury resorts.</p>
+    </div>
+    <div class="destination-card">
+      <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1" alt="Mountain">
+      <h3>Switzerland</h3>
+      <p>Breathtaking mountains and alpine adventures await.</p>
     </div>
   </section>
 </body>

@@ -5,16 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Us - TravelBloom</title>
   <link rel="stylesheet" href="style.css">
-  <script defer src="script.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
+  <!-- Header -->
   <header>
-    <div class="logo">TravelBloom</div>
+    <div class="logo">
+      <img src="https://img.icons8.com/?size=100&id=8771&format=png&color=FFFFFF" alt="logo">
+      TravelBloom
+    </div>
+
     <nav>
       <a href="index.html">Home</a>
       <a href="about.html">About Us</a>
-      <a href="contact.html">Contact Us</a>
+      <a href="contact.html" class="active">Contact Us</a>
     </nav>
+
     <div class="search-box">
       <input type="text" id="searchInput" placeholder="Enter a destination or keyword">
       <button onclick="searchDestinations()">Search</button>
@@ -22,14 +28,22 @@
     </div>
   </header>
 
+  <!-- Social Media Bar -->
+  <div id="socialBar" class="social-bar">
+    <a href="#"><i class="fab fa-facebook-f"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-youtube"></i></a>
+  </div>
+
+  <!-- Contact Section -->
   <section class="contact">
     <h1>CONTACT US</h1>
-    <p>Get in touch</p>
-    <form id="contactForm">
-      <input type="text" id="name" placeholder="Name" required>
-      <input type="email" id="email" placeholder="Email" required>
-      <textarea id="message" placeholder="Message" required></textarea>
-      <button type="submit">Submit</button>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send</button>
     </form>
   </section>
 </body>

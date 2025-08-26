@@ -6,23 +6,33 @@
 }
 
 body {
-  background: #f8f8f8;
+  margin: 0;
+  padding: 0;
+  background: url('https://plus.unsplash.com/premium_photo-1664303991463-36449a65d3d6?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') 
+            no-repeat center center/cover;
+
   color: #fff;
+  min-height: 100vh;
 }
+
 
 header {
   position: fixed;
   top: 0;
   width: 100%;
+  color: #fff; 
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #222;
+  background: rgba(0, 0, 0, 0.3);  /* transparent */
+  backdrop-filter: blur(6px);       /* frosted glass effect */
   padding: 15px 50px;
   z-index: 1000;
 }
 
+
 header .logo {
+  color: #fff;
   font-size: 22px;
   font-weight: bold;
 }
@@ -37,19 +47,20 @@ header nav a.active {
   color: #00ffcc;
 }
 
-  .logo {
-      display: flex;
-      align-items: center;
-      color: white;
-      font-size: 20px;
-      font-weight: bold;
-    }
+.logo {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+}
 
-    .logo img {
-      width: 30px;
-      height: 30px;
-      margin-right: 8px;
-    }
+.logo img {
+  width: 28px;
+  height: 28px;
+  margin-right: 8px;
+}
+
 
 .search-box {
   display: flex;
@@ -84,6 +95,8 @@ header nav a.active {
   text-align: left;
   color: white;
   max-width: 600px;
+  position: absolute;
+  left: 10%;
 }
 
 .overlay h1 {
@@ -106,14 +119,24 @@ header nav a.active {
 
 .about, .contact, .destinations {
   padding: 100px 50px;
-  background: url('images/home-bg.jpg') center/cover no-repeat;
   min-height: 100vh;
+  background: none; /* remove page-specific background */
 }
+
 
 .about h1, .contact h1 {
   font-size: 40px;
   margin-bottom: 20px;
 }
+
+.about {
+  padding: 100px 50px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* pushes content to bottom */
+}
+
 
 .team {
   display: flex;
@@ -126,18 +149,35 @@ header nav a.active {
   border-radius: 10px;
 }
 
+.contact {
+  padding: 100px 50px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* centers horizontally */
+  justify-content: center; /* centers vertically */
+  background: none;
+  text-align: center;    /* centers text inside */
+}
+
+
+
 .contact form {
   display: flex;
   flex-direction: column;
   max-width: 400px;
 }
 
-.contact input, .contact textarea {
+.contact input, 
+.contact textarea {
   margin: 10px 0;
   padding: 10px;
   border: none;
   border-radius: 5px;
+  width: 400px;   /* set a fixed width */
+  max-width: 100%; /* still responsive on small screens */
 }
+
 
 .contact button {
   background: teal;
@@ -158,3 +198,53 @@ header nav a.active {
   width: 100%;
   border-radius: 10px;
 }
+
+header nav a {
+  margin: 0 15px;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+header nav a:hover {
+  color: #00ffcc; /* teal hover */
+}
+
+.social-bar {
+  position: fixed;
+  top: 50%;                  /* middle of the screen */
+  left: 50px;                /* move away from edge */
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  z-index: 1000;
+}
+
+.social-bar a {
+  color: white;
+  font-size: 22px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  position: relative;
+  z-index: 2; /* keep icons above the line */
+}
+
+.social-bar a:hover {
+  color: #5ad8ff; /* teal on hover */
+}
+
+/* continuous vertical line */
+.social-bar::before {
+  content: "";
+  position: absolute;
+  top: -280px;
+  bottom: 200px;
+  left: 50%;
+  width: 2px;
+  background: white;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
