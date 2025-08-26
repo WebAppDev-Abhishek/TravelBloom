@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f8f8f8;
+  color: #fff;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #222;
+  padding: 15px 50px;
+  z-index: 1000;
+}
+
+header .logo {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+header nav a {
+  margin: 0 15px;
+  color: #fff;
+  text-decoration: none;
+}
+
+header nav a.active {
+  color: #00ffcc;
+}
+
+.search-box {
+  display: flex;
+}
+
+.search-box input {
+  padding: 8px;
+  border: none;
+  border-radius: 5px 0 0 5px;
+}
+
+.search-box button {
+  padding: 8px 12px;
+  border: none;
+  background: teal;
+  color: white;
+  cursor: pointer;
+}
+
+.hero {
+  height: 100vh;
+  background: url('images/home-bg.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay {
+  text-align: left;
+  color: white;
+  max-width: 600px;
+}
+
+.overlay h1 {
+  font-size: 50px;
+  line-height: 1.2;
+}
+
+.overlay p {
+  margin: 20px 0;
+  font-size: 16px;
+}
+
+.btn {
+  padding: 10px 20px;
+  background: teal;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.about, .contact, .destinations {
+  padding: 100px 50px;
+  background: url('images/home-bg.jpg') center/cover no-repeat;
+  min-height: 100vh;
+}
+
+.about h1, .contact h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.team {
+  display: flex;
+  gap: 20px;
+}
+
+.member {
+  background: rgba(0,0,0,0.6);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+}
+
+.contact input, .contact textarea {
+  margin: 10px 0;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.contact button {
+  background: teal;
+  padding: 10px;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.destination-card {
+  background: rgba(0,0,0,0.7);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.destination-card img {
+  width: 100%;
+  border-radius: 10px;
+}
