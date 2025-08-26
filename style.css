@@ -1,0 +1,307 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: url('https://plus.unsplash.com/premium_photo-1664303991463-36449a65d3d6?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') 
+            no-repeat center center/cover;
+
+  color: #fff;
+  min-height: 100vh;
+}
+
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  color: #fff; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.3);  /* transparent */
+  backdrop-filter: blur(6px);       /* frosted glass effect */
+  padding: 15px 50px;
+  z-index: 1000;
+}
+
+
+header .logo {
+  color: #fff;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+header nav a {
+  margin: 0 15px;
+  color: #fff;
+  text-decoration: none;
+}
+
+header nav a.active {
+  color: #00ffcc;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.logo img {
+  width: 28px;
+  height: 28px;
+  margin-right: 8px;
+}
+
+
+.search-box {
+  display: flex;
+}
+
+.search-box input {
+  padding: 8px;
+  border: none;
+  border-radius: 5px 0 0 5px;
+}
+
+.search-box button {
+  padding: 8px 12px;
+  border: none;
+  background: teal;
+  color: white;
+  cursor: pointer;
+}
+
+.hero {
+      height: 100vh;
+      background: url('https://plus.unsplash.com/premium_photo-1664303991463-36449a65d3d6?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') 
+        no-repeat center center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 0 60px;
+      position: relative;
+    }
+
+.overlay {
+  text-align: left;
+  color: white;
+  max-width: 600px;
+  position: absolute;
+  left: 10%;
+}
+
+.overlay h1 {
+  font-size: 50px;
+  line-height: 1.2;
+}
+
+.overlay p {
+  margin: 20px 0;
+  font-size: 16px;
+}
+
+.btn {
+  padding: 10px 20px;
+  background: teal;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.about, .contact, .destinations {
+  padding: 100px 50px;
+  min-height: 100vh;
+  background: none; /* remove page-specific background */
+}
+
+
+.about h1, .contact h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.about {
+  padding: 100px 50px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* pushes content to bottom */
+}
+
+
+.team {
+  display: flex;
+  gap: 20px;
+}
+
+.member {
+  background: rgba(0,0,0,0.6);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.contact {
+  padding: 100px 50px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* centers horizontally */
+  justify-content: center; /* centers vertically */
+  background: none;
+  text-align: center;    /* centers text inside */
+}
+
+
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+}
+
+.contact input, 
+.contact textarea {
+  margin: 10px 0;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  width: 400px;   /* set a fixed width */
+  max-width: 100%; /* still responsive on small screens */
+}
+
+
+.contact button {
+  background: teal;
+  padding: 10px;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.destination-card {
+  background: rgba(0,0,0,0.7);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.destination-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+header nav a {
+  margin: 0 15px;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+header nav a:hover {
+  color: #00ffcc; /* teal hover */
+}
+
+.social-bar {
+  position: fixed;
+  top: 50%;                  /* middle of the screen */
+  left: 50px;                /* move away from edge */
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  z-index: 1000;
+}
+
+.social-bar a {
+  color: white;
+  font-size: 22px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  position: relative;
+  z-index: 2; /* keep icons above the line */
+}
+
+.social-bar a:hover {
+  color: #5ad8ff; /* teal on hover */
+}
+
+/* continuous vertical line */
+.social-bar::before {
+  content: "";
+  position: absolute;
+  top: -280px;
+  bottom: 200px;
+  left: 50%;
+  width: 2px;
+  background: white;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+
+.destination-card-container {
+  position: fixed;
+  top: 50%;
+  right: 40px;
+  transform: translateY(-50%);
+  z-index: 9999;
+  display: none;
+}
+
+.destination-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  overflow: hidden;
+  width: 320px;
+  font-family: Arial, sans-serif;
+}
+
+.destination-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 15px;
+}
+
+.card-content h3 {
+  margin: 0 0 8px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #222;
+}
+
+.card-content p {
+  margin: 0 0 15px;
+  color: #666;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.card-content .btn {
+  display: inline-block;
+  padding: 8px 14px;
+  background: teal; /* green like your sample */
+  color: #fff;
+  font-size: 14px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.card-content .btn:hover {
+  background: #218838;
+}

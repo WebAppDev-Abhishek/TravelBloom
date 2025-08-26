@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TravelBloom - Home</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <script defer src="script.js"></script>
+    </head>
+    <body>
+        <!-- Header -->
+        <header>
+            <div class="logo">
+                <img src="https://img.icons8.com/?size=100&id=8771&format=png&color=FFFFFF" alt="logo">
+                TravelBloom
+            </div>
+            
+            <nav>
+                <a href="index.html" class="active">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact Us</a>
+            </nav>
+            
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Enter a destination or keyword">
+                <button onclick="searchDestinations()">Search</button>
+                <button onclick="clearSearch()">Clear</button>
+            </div>
+        </header>
+       <!-- Search Results Card (right-center) -->
+<!-- Fixed Search Result Card (right-center) -->
+<div id="searchResultCard" class="destination-card-container" style="display:none;">
+  <div class="destination-card">
+    <img id="cardImage" src="" alt="Destination">
+    <div class="card-content">
+      <h3 id="cardTitle"></h3>
+      <p id="cardDescription"></p>
+      <a href="#" class="btn">Visit</a>
+    </div>
+  </div>
+</div>
+
+
+<!-- Keep this empty section if you want anchor link -->
+<section id="results" class="results"></section>
+
+
+  <!-- Social Media Bar -->
+  <div class="social-bar">
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-facebook-f"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-youtube"></i></a>
+  </div>
+
+  <!-- Main Content Split -->
+  <main class="main-layout">
+    <!-- Hero Section -->
+    <section class="hero">
+        <!-- Search Results -->
+<div id="searchResults" class="results-container"></div>
+
+      <div class="overlay">
+        <h1>EXPLORE <br> DREAM <br> DESTINATION</h1>
+        <p>It encourages exploration of unfamiliar territories, embracing diverse cultures and landscapes, 
+          while pursuing the desired destination that captivates the heart and ignites a sense of wonder.</p>
+        <a href="#results" class="btn">BOOK NOW</a>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

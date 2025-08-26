@@ -20,14 +20,10 @@ The project features a **search bar** to find destinations by name or keyword an
 ---
 
 ## 🖼️ Demo Screenshot
+![TravelBloom Card Example](./card.png)  
+*(Sample destination card with image, title, description, and button)*
 
----<img width="1136" height="920" alt="screencapture-127-0-0-1-5500-index-html-2025-08-26-16_02_57" src="https://github.com/user-attachments/assets/dc9106a0-22d3-4cd5-9e5b-352d50f29587" />
-
-<img width="1136" height="920" alt="screencapture-127-0-0-1-5500-about-html-2025-08-26-16_03_13" src="https://github.com/user-attachments/assets/2a98428d-859b-426d-a64d-4d7b4baa6ae9" />
-
-<img width="1136" height="920" alt="screencapture-127-0-0-1-5500-contact-html-2025-08-26-16_03_35" src="https://github.com/user-attachments/assets/e96a9718-6d6e-4464-9541-bef061809bda" />
-
-<img width="1136" height="920" alt="screencapture-127-0-0-1-5500-index-html-2025-08-26-16_28_27" src="https://github.com/user-attachments/assets/ddfd70b8-226c-4d54-ab35-51dc07053e44" />
+---
 
 ## 🚀 Getting Started
 
